@@ -236,7 +236,7 @@ export default function Home() {
             value={baseTime}
             onChange={(e) => setBaseTime(e.target.value)}
           /> */}
-          <button onClick={fetchWeather}>날씨 정보 가져오기</button>
+          <button className="bg-blue-500 text-white px-2 py-1.5 rounded-md hover:bg-blue-600 transition-colors duration-300" onClick={fetchWeather}>날씨 정보 가져오기</button>
         </div>
         <div className="date-info grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {Object.keys(dateInfoMap).map(datePart => (
