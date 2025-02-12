@@ -104,7 +104,7 @@ interface DateInfoMap {
 export default function Home() {
   const [latitude, setLatitude] = useState<string | null>(null); // 서울의 위도
   const [longitude, setLongitude] = useState<string | null>(null); // 서울의 경도
-  const [baseTime, setBaseTime] = useState<string>('0500');
+  const [baseTime] = useState<string>('0500');
   const [dateInfoMap, setDateInfoMap] = useState<DateInfoMap>({});
 
   const handleLocationChange = (city: string, district: string) => {
