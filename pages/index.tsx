@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
@@ -138,8 +137,8 @@ export default function Home() {
     const skyValues: WeatherData = {};
     const popValues: WeatherData = {};
     const rehValues: WeatherData = {};
-    const tmxValues: WeatherData = {};
-    const tmnValues: WeatherData = {};
+    // const tmxValues: WeatherData = {};
+    // const tmnValues: WeatherData = {};
 
     for (const item of items) {
       const category = item.category;
@@ -156,13 +155,14 @@ export default function Home() {
       } else if (category === 'REH') {
         const datetime = fcstDate + fcstTime;
         rehValues[datetime] = fcstValue;
-      } else if (category === 'TMX') {
-        const datetime = fcstDate + fcstTime;
-        tmxValues[datetime] = fcstValue;
-      } else if (category === 'TMN') {
-        const datetime = fcstDate + fcstTime;
-        tmnValues[datetime] = fcstValue;
-      }
+      } 
+      // else if (category === 'TMX') {
+        // const datetime = fcstDate + fcstTime;
+        // tmxValues[datetime] = fcstValue;
+      // } else if (category === 'TMN') {
+        // const datetime = fcstDate + fcstTime;
+        // tmnValues[datetime] = fcstValue;
+      // }
     }
 
     const newDateInfoMap: DateInfoMap = {};
@@ -177,8 +177,8 @@ export default function Home() {
         const skyInfo = `${timeVal}시 - SKY: ${skyValues[datetime]}`;
         const popInfo = `강수확률: ${popValues[datetime]}%`;
         const rehInfo = `습도: ${rehValues[datetime]}%`;
-        const tmxInfo = `최고기온: ${tmxValues[datetime]}°C`;
-        const tmnInfo = `최저기온: ${tmnValues[datetime]}°C`;
+        // const tmxInfo = `최고기온: ${tmxValues[datetime]}°C`;
+        // const tmnInfo = `최저기온: ${tmnValues[datetime]}°C`;
 
         if (!newDateInfoMap[datePart]) {
           newDateInfoMap[datePart] = [];
