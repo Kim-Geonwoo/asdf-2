@@ -126,7 +126,8 @@ export default function Home() {
     const day = ('0' + date.getDate()).slice(-2);
     const initDate = `${year}${month}${day}`;
     console.log(initDate);
-    const apiKey = '공공데이터포털 인증키'; // 인코딩된 인증키
+    const apiKey = process.env.DATAGOKR_APIKEY // 인코딩된 인증키
+
     const url = `https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=${apiKey}&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${initDate}&base_time=${baseTime}&nx=${latitude}&ny=${longitude}`;
 
     // API 호출 및 데이터 처리
