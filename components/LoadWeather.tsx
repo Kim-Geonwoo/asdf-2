@@ -25,7 +25,7 @@ const LoadWeather: React.FC<LoadWeatherProps> = ({ setDateInfoMap, baseTime, lat
       const day = ('0' + date.getDate()).slice(-2);
       const initDate = `${year}${month}${day}`;
       console.log(initDate);
-      const apiKey = '0JsQpYhygc3rYN45tHDwerOuwrxfUwb1LXmsT%2BNrx4yWV%2BH7qTot6zxSLkFc5SeIyrc%2BwNI9ulVD9PM7lRegfg%3D%3D'; // 인코딩된 인증키
+      const apiKey = "EavX8tvTrTQDeJ4%2B0cKC9MzJa%2BB08kLsUlBTTHdGjLtnCTEC5NJDQM%2B%2FpalNjTkd8Eopkh1glyz8EJZ75i51Fw%3D%3D" // 인코딩된 인증키
       const url = `https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=${apiKey}&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${initDate}&base_time=${baseTime}&nx=${latitude}&ny=${longitude}`;
 
       // API 호출 및 데이터 처리
